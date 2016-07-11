@@ -42,7 +42,7 @@ namespace nrcore {
         while (stms.length()) {
             st = stms.get();
             delete st;
-            stms.remove();
+            streams.remove(stms.getNode());
         }
     }
 

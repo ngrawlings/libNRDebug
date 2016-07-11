@@ -31,11 +31,11 @@
 #include <stdio.h>
 
 #if THREADING_DISABLED == 0
-#include <libnrcore/threading/Mutex.h>
+#include <libnrthreads/Mutex.h>
 #endif
 
 #include <libnrcore/memory/LinkedList.h>
-#include <libnrcore/io/Stream.h>
+#include <libnrio/Stream.h>
 
 #if DEBUG_DISABLED == 0
 

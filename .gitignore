@@ -1,1 +1,7 @@
 .DS_Store
+build/libnrdebug.a
+build/Log.o
+autom4te.cache
+config.h
+config.log
+config.status

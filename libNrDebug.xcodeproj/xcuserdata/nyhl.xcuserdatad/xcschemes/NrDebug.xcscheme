@@ -18,7 +18,7 @@
                BlueprintIdentifier = "97B467531C9AFBF800DD2C30"
                BuildableName = "libNrDebug.a"
                BlueprintName = "NrDebug"
-               ReferencedContainer = "container:NrDebug.xcodeproj">
+               ReferencedContainer = "container:libNrDebug.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -49,7 +49,7 @@
             BlueprintIdentifier = "97B467531C9AFBF800DD2C30"
             BuildableName = "libNrDebug.a"
             BlueprintName = "NrDebug"
-            ReferencedContainer = "container:NrDebug.xcodeproj">
+            ReferencedContainer = "container:libNrDebug.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -67,7 +67,7 @@
             BlueprintIdentifier = "97B467531C9AFBF800DD2C30"
             BuildableName = "libNrDebug.a"
             BlueprintName = "NrDebug"
-            ReferencedContainer = "container:NrDebug.xcodeproj">
+            ReferencedContainer = "container:libNrDebug.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

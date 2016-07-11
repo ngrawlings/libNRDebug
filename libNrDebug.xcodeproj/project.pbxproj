@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		97B4675E1C9AFC4500DD2C30 /* Log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97B4675C1C9AFC4500DD2C30 /* Log.cpp */; };
-		97B4675F1C9AFC4500DD2C30 /* Log.h in Headers */ = {isa = PBXBuildFile; fileRef = 97B4675D1C9AFC4500DD2C30 /* Log.h */; };
+		979DE88C1D329A5500F9FA41 /* Log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 979DE88A1D329A5500F9FA41 /* Log.cpp */; };
+		979DE88D1D329A5500F9FA41 /* Log.h in Headers */ = {isa = PBXBuildFile; fileRef = 979DE88B1D329A5500F9FA41 /* Log.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		979DE88A1D329A5500F9FA41 /* Log.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Log.cpp; path = libnrdebug/Log.cpp; sourceTree = "<group>"; };
+		979DE88B1D329A5500F9FA41 /* Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Log.h; path = libnrdebug/Log.h; sourceTree = "<group>"; };
 		97B467541C9AFBF800DD2C30 /* libNrDebug.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNrDebug.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		97B4675C1C9AFC4500DD2C30 /* Log.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Log.cpp; path = nrdebug/Log.cpp; sourceTree = "<group>"; };
-		97B4675D1C9AFC4500DD2C30 /* Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Log.h; path = nrdebug/Log.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,7 +31,7 @@
 		97B4674B1C9AFBF800DD2C30 = {
 			isa = PBXGroup;
 			children = (
-				97B4675B1C9AFC3600DD2C30 /* nrdebug */,
+				97B4675B1C9AFC3600DD2C30 /* src */,
 				97B467551C9AFBF800DD2C30 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,13 +44,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		97B4675B1C9AFC3600DD2C30 /* nrdebug */ = {
+		97B4675B1C9AFC3600DD2C30 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				97B4675D1C9AFC4500DD2C30 /* Log.h */,
-				97B4675C1C9AFC4500DD2C30 /* Log.cpp */,
+				979DE88A1D329A5500F9FA41 /* Log.cpp */,
+				979DE88B1D329A5500F9FA41 /* Log.h */,
 			);
-			name = nrdebug;
+			name = src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -60,7 +60,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97B4675F1C9AFC4500DD2C30 /* Log.h in Headers */,
+				979DE88D1D329A5500F9FA41 /* Log.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,7 +120,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97B4675E1C9AFC4500DD2C30 /* Log.cpp in Sources */,
+				979DE88C1D329A5500F9FA41 /* Log.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,6 +212,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EXECUTABLE_PREFIX = lib;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../libNRCore\"",
+					"\"$(SRCROOT)/../libNrThreads\"",
+					"\"$(SRCROOT)/../libNrIO\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -220,6 +225,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EXECUTABLE_PREFIX = lib;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../libNRCore\"",
+					"\"$(SRCROOT)/../libNrThreads\"",
+					"\"$(SRCROOT)/../libNrIO\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
