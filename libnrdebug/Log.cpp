@@ -42,7 +42,7 @@ namespace nrcore {
         while (stms.length()) {
             st = stms.get();
             delete st;
-            streams.remove(stms.getNode());
+            streams.removeNode(stms.getNode());
         }
     }
 
@@ -62,7 +62,18 @@ namespace nrcore {
     }
 
     void Log::removeStream(Stream* stream) {
-        streams.remove(stream);
+        LinkedListState<STREAM*> ss(&streams);
+        
+        STREAM **s;
+        
+        ss.first();
+        
+        while (ss.iterate(&s)) {
+            if ((*s)->stream == stream) {
+                streams.removeNode(ss.getNode());
+                break;
+            }
+        }
     }
 
     void Log::log(int log_level, const char *format, ...) {
@@ -91,19 +102,22 @@ namespace nrcore {
         int cnt = stms.length();
         STREAM* st;
         char timebuf[64];
-        char logbuf[256];
-        char final[256+64];
+        char *logbuf = new char[1024];
+        char *final = new char[1124];
         
-        vsnprintf(logbuf, 256, format, vars);
+        vsnprintf(logbuf, 1024, format, vars);
         
         while (cnt--) {
             st = stms.next();
             if (log_level <= st->log_level) {
                 strftime(timebuf, 64, st->time_format, &_tm);
-                snprintf(final, 256+64, st->format, timebuf, logbuf);
+                snprintf(final, 1124, st->format, timebuf, logbuf);
                 st->stream->write(final, strlen(final));
             }
         }
+        
+        delete [] final;
+        delete [] logbuf;
 
     #if LOG_THREAD_SAFE != 0 && THREADING_DISABLED == 0 && DEBUG_DISABLED == 0
         mutex.release();
