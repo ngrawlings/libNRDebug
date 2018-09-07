@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9799518F21428DDD001A6DCA /* UnitTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9799518D21428DDD001A6DCA /* UnitTests.cpp */; };
+		9799519021428DDD001A6DCA /* UnitTests.h in Headers */ = {isa = PBXBuildFile; fileRef = 9799518E21428DDD001A6DCA /* UnitTests.h */; };
 		979DE88C1D329A5500F9FA41 /* Log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 979DE88A1D329A5500F9FA41 /* Log.cpp */; };
 		979DE88D1D329A5500F9FA41 /* Log.h in Headers */ = {isa = PBXBuildFile; fileRef = 979DE88B1D329A5500F9FA41 /* Log.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9799518D21428DDD001A6DCA /* UnitTests.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = UnitTests.cpp; path = libnrdebug/UnitTests.cpp; sourceTree = "<group>"; };
+		9799518E21428DDD001A6DCA /* UnitTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UnitTests.h; path = libnrdebug/UnitTests.h; sourceTree = "<group>"; };
 		979DE88A1D329A5500F9FA41 /* Log.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Log.cpp; path = libnrdebug/Log.cpp; sourceTree = "<group>"; };
 		979DE88B1D329A5500F9FA41 /* Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Log.h; path = libnrdebug/Log.h; sourceTree = "<group>"; };
 		97B467541C9AFBF800DD2C30 /* libNrDebug.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNrDebug.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +53,8 @@
 			children = (
 				979DE88A1D329A5500F9FA41 /* Log.cpp */,
 				979DE88B1D329A5500F9FA41 /* Log.h */,
+				9799518E21428DDD001A6DCA /* UnitTests.h */,
+				9799518D21428DDD001A6DCA /* UnitTests.cpp */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -60,6 +66,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9799519021428DDD001A6DCA /* UnitTests.h in Headers */,
 				979DE88D1D329A5500F9FA41 /* Log.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,6 +128,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				979DE88C1D329A5500F9FA41 /* Log.cpp in Sources */,
+				9799518F21428DDD001A6DCA /* UnitTests.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
