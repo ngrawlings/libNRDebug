@@ -24,12 +24,14 @@ namespace nrcore {
     class UnitTests {
     public:
         
-        void addTest(Ref<UNITTEST_ENTRY> test);
-        void addTests(RefArray<Ref<UNITTEST_ENTRY>> tests, int count);
+        void addTest(String name, UNITTEST cb);
+        void addTests(RefArray< Ref<UNITTEST_ENTRY> > tests, int count);
         bool run();
         
+        bool static fail(const char *msg);
+        
     private:
-        LinkedList<Ref<UNITTEST_ENTRY>> tests;
+        LinkedList< Ref<UNITTEST_ENTRY> > tests;
     };
     
 }

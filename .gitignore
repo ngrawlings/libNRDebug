@@ -5,3 +5,4 @@ autom4te.cache
 config.h
 config.log
 config.status
+/build

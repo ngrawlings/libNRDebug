@@ -10,11 +10,17 @@
 
 namespace nrcore {
     
-    void UnitTests::addTest(Ref<UNITTEST_ENTRY> test) {
-        this->tests.add(test);
+    void UnitTests::addTest(String name, UNITTEST cb) {
+        UNITTEST_ENTRY *test = new UNITTEST_ENTRY;
+        
+        test->name = name;
+        test->method = cb;
+        
+        Ref<UNITTEST_ENTRY> new_entry = Ref<UNITTEST_ENTRY>(test);
+        this->tests.add(new_entry);
     }
     
-    void UnitTests::addTests(RefArray<Ref<UNITTEST_ENTRY>> tests, int count) {
+    void UnitTests::addTests(RefArray< Ref<UNITTEST_ENTRY> > tests, int count) {
         for(int i=0; i<count; i++)
             this->tests.add(tests.getPtr()[i]);
     }
@@ -23,24 +29,29 @@ namespace nrcore {
         bool ret = true;
         
         if (tests.length()) {
-            LINKEDLIST_NODE_HANDLE node = tests.firstNode();
-            do {
-                Ref<UNITTEST_ENTRY> test = tests.get(node);
+            LinkedListState< Ref<UNITTEST_ENTRY> > test_state(&tests);
+            Ref<UNITTEST_ENTRY> *obj_out;
+            
+            while(test_state.iterate(&obj_out)) {
                 try {
-                    if (test.getPtr()->method()) {
-                        printf("%s succeeded\r\n", (char*)test.getPtr()->name);
+                    if (obj_out->getPtr()->method()) {
+                        printf("%s succeeded\r\n", (char*)obj_out->getPtr()->name);
                     } else {
-                        printf("%s failed\r\n", (char*)test.getPtr()->name);
+                        printf("%s failed\r\n", (char*)obj_out->getPtr()->name);
                         ret = false;
                     }
                 } catch (String err) {
-                    printf("%s failed with the following error: %s\r\n", (char*)test.getPtr()->name, (char*)err);
+                    printf("%s failed with the following error: %s\r\n", (char*)obj_out->getPtr()->name, (char*)err);
                     ret = false;
                 }
-            } while ((node = tests.nextNode(node)));
+            }
         }
         
         return ret;
+    }
+    
+    bool UnitTests::fail(const char *msg) {
+        throw String(msg);
     }
     
 }
