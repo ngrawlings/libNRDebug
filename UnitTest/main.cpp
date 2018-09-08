@@ -11,7 +11,15 @@
 
 using namespace nrcore;
 
-bool testUnitTesting() {
+bool testUnitTestingSuccess() {
+    return true;
+}
+
+bool testUnitTestingFailed() {
+    return false;
+}
+
+bool testUnitTestingException() {
     UnitTests::fail("Faield by calling fail");
     return true;
 }
@@ -19,7 +27,9 @@ bool testUnitTesting() {
 int main(int argc, const char * argv[]) {
     UnitTests tests;
     
-    tests.addTest("testUnitTesting", testUnitTesting);
+    tests.addTest("testUnitTestingSuccess", testUnitTestingSuccess);
+    tests.addTest("testUnitTestingFailed", testUnitTestingFailed);
+    tests.addTest("testUnitTestingException", testUnitTestingException);
     tests.run();
     
     return 0;
