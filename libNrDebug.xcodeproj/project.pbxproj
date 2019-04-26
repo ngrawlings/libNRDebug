@@ -13,7 +13,7 @@
 		979B6A9921430806001181FE /* UnitTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9799518D21428DDD001A6DCA /* UnitTests.cpp */; };
 		979B6A9A21430809001181FE /* Log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 979DE88A1D329A5500F9FA41 /* Log.cpp */; };
 		979B6A9D2143089E001181FE /* libnrcore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 979B6A9C2143089E001181FE /* libnrcore.a */; };
-		979B6A9E21430996001181FE /* libNrDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97B467541C9AFBF800DD2C30 /* libNrDebug.a */; };
+		979B6A9E21430996001181FE /* libnrdebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97B467541C9AFBF800DD2C30 /* libnrdebug.a */; };
 		979DE88C1D329A5500F9FA41 /* Log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 979DE88A1D329A5500F9FA41 /* Log.cpp */; };
 		979DE88D1D329A5500F9FA41 /* Log.h in Headers */ = {isa = PBXBuildFile; fileRef = 979DE88B1D329A5500F9FA41 /* Log.h */; };
 /* End PBXBuildFile section */
@@ -38,7 +38,7 @@
 		979B6A9C2143089E001181FE /* libnrcore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libnrcore.a; path = ../../../../../usr/local/lib/libnrcore.a; sourceTree = "<group>"; };
 		979DE88A1D329A5500F9FA41 /* Log.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Log.cpp; path = libnrdebug/Log.cpp; sourceTree = "<group>"; };
 		979DE88B1D329A5500F9FA41 /* Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Log.h; path = libnrdebug/Log.h; sourceTree = "<group>"; };
-		97B467541C9AFBF800DD2C30 /* libNrDebug.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNrDebug.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		97B467541C9AFBF800DD2C30 /* libnrdebug.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libnrdebug.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				979B6A9E21430996001181FE /* libNrDebug.a in Frameworks */,
+				979B6A9E21430996001181FE /* libnrdebug.a in Frameworks */,
 				979B6A9D2143089E001181FE /* libnrcore.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -90,7 +90,7 @@
 		97B467551C9AFBF800DD2C30 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				97B467541C9AFBF800DD2C30 /* libNrDebug.a */,
+				97B467541C9AFBF800DD2C30 /* libnrdebug.a */,
 				979B6A92214307B7001181FE /* UnitTest */,
 			);
 			name = Products;
@@ -153,7 +153,7 @@
 			);
 			name = NrDebug;
 			productName = NrDebug;
-			productReference = 97B467541C9AFBF800DD2C30 /* libNrDebug.a */;
+			productReference = 97B467541C9AFBF800DD2C30 /* libnrdebug.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -180,6 +180,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 97B4674B1C9AFBF800DD2C30;
@@ -393,7 +394,8 @@
 					"\"$(SRCROOT)/../libNrThreads\"",
 					"\"$(SRCROOT)/../libNrIO\"",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_MODULE_NAME = nrdebug;
+				PRODUCT_NAME = nrdebug;
 			};
 			name = Debug;
 		};
@@ -406,7 +408,8 @@
 					"\"$(SRCROOT)/../libNrThreads\"",
 					"\"$(SRCROOT)/../libNrIO\"",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_MODULE_NAME = nrdebug;
+				PRODUCT_NAME = nrdebug;
 			};
 			name = Release;
 		};
