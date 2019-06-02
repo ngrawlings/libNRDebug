@@ -7,15 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9799518F21428DDD001A6DCA /* UnitTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9799518D21428DDD001A6DCA /* UnitTests.cpp */; };
-		9799519021428DDD001A6DCA /* UnitTests.h in Headers */ = {isa = PBXBuildFile; fileRef = 9799518E21428DDD001A6DCA /* UnitTests.h */; };
 		979B6A95214307B7001181FE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 979B6A94214307B7001181FE /* main.cpp */; };
-		979B6A9921430806001181FE /* UnitTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9799518D21428DDD001A6DCA /* UnitTests.cpp */; };
-		979B6A9A21430809001181FE /* Log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 979DE88A1D329A5500F9FA41 /* Log.cpp */; };
 		979B6A9D2143089E001181FE /* libnrcore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 979B6A9C2143089E001181FE /* libnrcore.a */; };
 		979B6A9E21430996001181FE /* libnrdebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97B467541C9AFBF800DD2C30 /* libnrdebug.a */; };
-		979DE88C1D329A5500F9FA41 /* Log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 979DE88A1D329A5500F9FA41 /* Log.cpp */; };
-		979DE88D1D329A5500F9FA41 /* Log.h in Headers */ = {isa = PBXBuildFile; fileRef = 979DE88B1D329A5500F9FA41 /* Log.h */; };
+		97A3377322A3C009007341E7 /* UnitTests.h in Headers */ = {isa = PBXBuildFile; fileRef = 97A3376E22A3C009007341E7 /* UnitTests.h */; };
+		97A3377522A3C009007341E7 /* UnitTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97A3377022A3C009007341E7 /* UnitTests.cpp */; };
+		97A3377622A3C009007341E7 /* Log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97A3377122A3C009007341E7 /* Log.cpp */; };
+		97A3377722A3C009007341E7 /* Log.h in Headers */ = {isa = PBXBuildFile; fileRef = 97A3377222A3C009007341E7 /* Log.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,13 +29,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		9799518D21428DDD001A6DCA /* UnitTests.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = UnitTests.cpp; path = libnrdebug/UnitTests.cpp; sourceTree = "<group>"; };
-		9799518E21428DDD001A6DCA /* UnitTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UnitTests.h; path = libnrdebug/UnitTests.h; sourceTree = "<group>"; };
 		979B6A92214307B7001181FE /* UnitTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = UnitTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		979B6A94214307B7001181FE /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		979B6A9C2143089E001181FE /* libnrcore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libnrcore.a; path = ../../../../../usr/local/lib/libnrcore.a; sourceTree = "<group>"; };
-		979DE88A1D329A5500F9FA41 /* Log.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Log.cpp; path = libnrdebug/Log.cpp; sourceTree = "<group>"; };
-		979DE88B1D329A5500F9FA41 /* Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Log.h; path = libnrdebug/Log.h; sourceTree = "<group>"; };
+		97A3376E22A3C009007341E7 /* UnitTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitTests.h; sourceTree = "<group>"; };
+		97A3377022A3C009007341E7 /* UnitTests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UnitTests.cpp; sourceTree = "<group>"; };
+		97A3377122A3C009007341E7 /* Log.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Log.cpp; sourceTree = "<group>"; };
+		97A3377222A3C009007341E7 /* Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Log.h; sourceTree = "<group>"; };
 		97B467541C9AFBF800DD2C30 /* libnrdebug.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libnrdebug.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -77,10 +75,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		97A3376D22A3BF8E007341E7 /* libnrdebug */ = {
+			isa = PBXGroup;
+			children = (
+				97A3377122A3C009007341E7 /* Log.cpp */,
+				97A3377222A3C009007341E7 /* Log.h */,
+				97A3377022A3C009007341E7 /* UnitTests.cpp */,
+				97A3376E22A3C009007341E7 /* UnitTests.h */,
+			);
+			path = libnrdebug;
+			sourceTree = "<group>";
+		};
 		97B4674B1C9AFBF800DD2C30 = {
 			isa = PBXGroup;
 			children = (
-				97B4675B1C9AFC3600DD2C30 /* src */,
+				97A3376D22A3BF8E007341E7 /* libnrdebug */,
 				979B6A93214307B7001181FE /* UnitTest */,
 				97B467551C9AFBF800DD2C30 /* Products */,
 				979B6A9B2143089E001181FE /* Frameworks */,
@@ -96,17 +105,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		97B4675B1C9AFC3600DD2C30 /* src */ = {
-			isa = PBXGroup;
-			children = (
-				979DE88B1D329A5500F9FA41 /* Log.h */,
-				979DE88A1D329A5500F9FA41 /* Log.cpp */,
-				9799518E21428DDD001A6DCA /* UnitTests.h */,
-				9799518D21428DDD001A6DCA /* UnitTests.cpp */,
-			);
-			name = src;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -114,8 +112,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9799519021428DDD001A6DCA /* UnitTests.h in Headers */,
-				979DE88D1D329A5500F9FA41 /* Log.h in Headers */,
+				97A3377722A3C009007341E7 /* Log.h in Headers */,
+				97A3377322A3C009007341E7 /* UnitTests.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,7 +160,7 @@
 		97B4674C1C9AFBF800DD2C30 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Liquidsoft Studio";
 				TargetAttributes = {
 					979B6A91214307B7001181FE = {
@@ -177,11 +175,11 @@
 			};
 			buildConfigurationList = 97B4674F1C9AFBF800DD2C30 /* Build configuration list for PBXProject "libNrDebug" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
+				Base,
 			);
 			mainGroup = 97B4674B1C9AFBF800DD2C30;
 			productRefGroup = 97B467551C9AFBF800DD2C30 /* Products */;
@@ -199,9 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				979B6A9A21430809001181FE /* Log.cpp in Sources */,
 				979B6A95214307B7001181FE /* main.cpp in Sources */,
-				979B6A9921430806001181FE /* UnitTests.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,8 +205,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				979DE88C1D329A5500F9FA41 /* Log.cpp in Sources */,
-				9799518F21428DDD001A6DCA /* UnitTests.cpp in Sources */,
+				97A3377622A3C009007341E7 /* Log.cpp in Sources */,
+				97A3377522A3C009007341E7 /* UnitTests.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +284,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -331,7 +328,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -342,6 +339,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -379,7 +377,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 			};
